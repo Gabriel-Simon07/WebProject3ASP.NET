@@ -17,7 +17,8 @@ namespace WebApplication3
 			{
 				if (usuario1.isAdmin == true)
 				{
-					btnAdmin.Enabled = false;
+					btnAdmin.Visible = false;
+					//btnAdmin.Enabled = false;
 				}
 			}
 		}
@@ -107,8 +108,10 @@ namespace WebApplication3
 			foreach (Usuario usuario1 in Usuario.Lista)
 			{
 				if (usuario1.isAdmin == true)
-				{					
-					btnAdmin.Enabled = false;
+				{
+
+					btnAdmin.Visible = false;
+					//btnAdmin.Enabled = false;
 				}
 			}
 

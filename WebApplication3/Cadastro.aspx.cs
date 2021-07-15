@@ -11,27 +11,6 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            bool achouAdmin = false;
-
-            foreach (Usuario usuario in Usuario.Lista)
-            {
-                if (usuario.Login == "admin")
-                {
-                    achouAdmin = true;
-                    break;
-                }
-            }
-
-			if (!achouAdmin)
-            {
-                var usuario = new Usuario();
-                usuario.Nome = "admin";
-                usuario.Email = "admin";
-                usuario.Login = "admin";
-                usuario.Senha = "admin";
-                usuario.Salvar();
-            }
-
             bool logado = false;
 
             if (HttpContext.Current.Session["Login"] != null) {
